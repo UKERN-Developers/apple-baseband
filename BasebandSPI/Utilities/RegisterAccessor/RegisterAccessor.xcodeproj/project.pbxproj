@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		DC37B4780D6654CE001F7147 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DC37B47F0D6654EF001F7147 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				DC37B47E0D6654D1001F7147 /* PBXTargetDependency */,
+				DC37B47C0D6654D1001F7147 /* PBXTargetDependency */,
+				DC37B62D0D668DF9001F7147 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		32D94FC60562CBF700B6AF17 /* RegisterAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A224C3EFF42367911CA2CB7 /* RegisterAccessor.h */; };
+		32D94FC80562CBF700B6AF17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		32D94FCA0562CBF700B6AF17 /* RegisterAccessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A224C3FFF42367911CA2CB7 /* RegisterAccessor.cpp */; settings = {ATTRIBUTES = (); }; };
+		DC37B0610D665141001F7147 /* RegisterAccessorIO.h in Headers */ = {isa = PBXBuildFile; fileRef = DC37B0600D665141001F7147 /* RegisterAccessorIO.h */; };
+		DC37B4760D6654AB001F7147 /* RegisterAccess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC37B07B0D66548F001F7147 /* RegisterAccess.cpp */; };
+		DC37B5C00D668152001F7147 /* RegisterAccessorLib.h in Headers */ = {isa = PBXBuildFile; fileRef = DC37B5BE0D668152001F7147 /* RegisterAccessorLib.h */; };
+		DC37B5D90D6684F3001F7147 /* RegisterAccessorLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC37B5BF0D668152001F7147 /* RegisterAccessorLib.cpp */; };
+		DC37B62B0D668DF2001F7147 /* PowerStateCycler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC37B61F0D6688A2001F7147 /* PowerStateCycler.cpp */; };
+		DC37B63A0D669023001F7147 /* RegisterAccessorLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC37B5BF0D668152001F7147 /* RegisterAccessorLib.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC37B47B0D6654D1001F7147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC37B0740D665470001F7147;
+			remoteInfo = RegisterAccess;
+		};
+		DC37B47D0D6654D1001F7147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32D94FC30562CBF700B6AF17;
+			remoteInfo = RegisterAccessor;
+		};
+		DC37B62C0D668DF9001F7147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC37B6260D668DCD001F7147;
+			remoteInfo = PowerStateChanger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1A224C3EFF42367911CA2CB7 /* RegisterAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAccessor.h; sourceTree = "<group>"; };
+		1A224C3FFF42367911CA2CB7 /* RegisterAccessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegisterAccessor.cpp; sourceTree = "<group>"; };
+		32D94FCF0562CBF700B6AF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32D94FD00562CBF700B6AF17 /* RegisterAccessor.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegisterAccessor.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DA8362C06AD9B9200E5AC22 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+		DC37B0600D665141001F7147 /* RegisterAccessorIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAccessorIO.h; sourceTree = "<group>"; };
+		DC37B0750D665470001F7147 /* RegisterAccess */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RegisterAccess; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC37B07B0D66548F001F7147 /* RegisterAccess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegisterAccess.cpp; sourceTree = "<group>"; };
+		DC37B5BE0D668152001F7147 /* RegisterAccessorLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAccessorLib.h; sourceTree = "<group>"; };
+		DC37B5BF0D668152001F7147 /* RegisterAccessorLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegisterAccessorLib.cpp; sourceTree = "<group>"; };
+		DC37B61F0D6688A2001F7147 /* PowerStateCycler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PowerStateCycler.cpp; sourceTree = "<group>"; };
+		DC37B6270D668DCD001F7147 /* PowerStateCycler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PowerStateCycler; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32D94FCB0562CBF700B6AF17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC37B0730D665470001F7147 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC37B6250D668DCD001F7147 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* RegisterAccessor */ = {
+			isa = PBXGroup;
+			children = (
+				247142CAFF3F8F9811CA285C /* Source */,
+				8DA8362C06AD9B9200E5AC22 /* Kernel.framework */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+			);
+			name = RegisterAccessor;
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32D94FCF0562CBF700B6AF17 /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32D94FD00562CBF700B6AF17 /* RegisterAccessor.kext */,
+				DC37B0750D665470001F7147 /* RegisterAccess */,
+				DC37B6270D668DCD001F7147 /* PowerStateCycler */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		247142CAFF3F8F9811CA285C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DC37B5BD0D668136001F7147 /* UserlandLibrary */,
+				DC37B5B90D6680DF001F7147 /* Kext */,
+				DC37B5BA0D668101001F7147 /* Utilities */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		DC37B5B90D6680DF001F7147 /* Kext */ = {
+			isa = PBXGroup;
+			children = (
+				DCB0BECC0E0B6262005B3C6A /* H2 */,
+				DCB0BEC90E0B6254005B3C6A /* H1 */,
+			);
+			name = Kext;
+			sourceTree = "<group>";
+		};
+		DC37B5BA0D668101001F7147 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DC37B5BC0D66811D001F7147 /* PowerStateCycler */,
+				DC37B5BB0D668111001F7147 /* RegisterAccess */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		DC37B5BB0D668111001F7147 /* RegisterAccess */ = {
+			isa = PBXGroup;
+			children = (
+				DC37B07B0D66548F001F7147 /* RegisterAccess.cpp */,
+			);
+			name = RegisterAccess;
+			sourceTree = "<group>";
+		};
+		DC37B5BC0D66811D001F7147 /* PowerStateCycler */ = {
+			isa = PBXGroup;
+			children = (
+				DC37B61F0D6688A2001F7147 /* PowerStateCycler.cpp */,
+			);
+			name = PowerStateCycler;
+			sourceTree = "<group>";
+		};
+		DC37B5BD0D668136001F7147 /* UserlandLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				DC37B5BE0D668152001F7147 /* RegisterAccessorLib.h */,
+				DC37B5BF0D668152001F7147 /* RegisterAccessorLib.cpp */,
+			);
+			name = UserlandLibrary;
+			sourceTree = "<group>";
+		};
+		DCB0BEC90E0B6254005B3C6A /* H1 */ = {
+			isa = PBXGroup;
+			children = (
+				DC37B0600D665141001F7147 /* RegisterAccessorIO.h */,
+				1A224C3EFF42367911CA2CB7 /* RegisterAccessor.h */,
+				1A224C3FFF42367911CA2CB7 /* RegisterAccessor.cpp */,
+			);
+			name = H1;
+			sourceTree = "<group>";
+		};
+		DCB0BECC0E0B6262005B3C6A /* H2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = H2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		32D94FC50562CBF700B6AF17 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32D94FC60562CBF700B6AF17 /* RegisterAccessor.h in Headers */,
+				DC37B0610D665141001F7147 /* RegisterAccessorIO.h in Headers */,
+				DC37B5C00D668152001F7147 /* RegisterAccessorLib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		32D94FC30562CBF700B6AF17 /* RegisterAccessor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "RegisterAccessor" */;
+			buildPhases = (
+				32D94FC50562CBF700B6AF17 /* Headers */,
+				32D94FC70562CBF700B6AF17 /* Resources */,
+				32D94FC90562CBF700B6AF17 /* Sources */,
+				32D94FCB0562CBF700B6AF17 /* Frameworks */,
+				32D94FCC0562CBF700B6AF17 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RegisterAccessor;
+			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+			productName = RegisterAccessor;
+			productReference = 32D94FD00562CBF700B6AF17 /* RegisterAccessor.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		DC37B0740D665470001F7147 /* RegisterAccess */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC37B0790D66548E001F7147 /* Build configuration list for PBXNativeTarget "RegisterAccess" */;
+			buildPhases = (
+				DC37B0720D665470001F7147 /* Sources */,
+				DC37B0730D665470001F7147 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RegisterAccess;
+			productName = RegisterAccess;
+			productReference = DC37B0750D665470001F7147 /* RegisterAccess */;
+			productType = "com.apple.product-type.tool";
+		};
+		DC37B6260D668DCD001F7147 /* PowerStateCycler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC37B6320D668E10001F7147 /* Build configuration list for PBXNativeTarget "PowerStateCycler" */;
+			buildPhases = (
+				DC37B6240D668DCD001F7147 /* Sources */,
+				DC37B6250D668DCD001F7147 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PowerStateCycler;
+			productName = PowerStateChanger;
+			productReference = DC37B6270D668DCD001F7147 /* PowerStateCycler */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "RegisterAccessor" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* RegisterAccessor */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32D94FC30562CBF700B6AF17 /* RegisterAccessor */,
+				DC37B0740D665470001F7147 /* RegisterAccess */,
+				DC37B6260D668DCD001F7147 /* PowerStateCycler */,
+				DC37B4780D6654CE001F7147 /* All */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32D94FC70562CBF700B6AF17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32D94FC80562CBF700B6AF17 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		32D94FCC0562CBF700B6AF17 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32D94FC90562CBF700B6AF17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32D94FCA0562CBF700B6AF17 /* RegisterAccessor.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC37B0720D665470001F7147 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC37B4760D6654AB001F7147 /* RegisterAccess.cpp in Sources */,
+				DC37B5D90D6684F3001F7147 /* RegisterAccessorLib.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC37B6240D668DCD001F7147 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC37B62B0D668DF2001F7147 /* PowerStateCycler.cpp in Sources */,
+				DC37B63A0D669023001F7147 /* RegisterAccessorLib.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC37B47C0D6654D1001F7147 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC37B0740D665470001F7147 /* RegisterAccess */;
+			targetProxy = DC37B47B0D6654D1001F7147 /* PBXContainerItemProxy */;
+		};
+		DC37B47E0D6654D1001F7147 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32D94FC30562CBF700B6AF17 /* RegisterAccessor */;
+			targetProxy = DC37B47D0D6654D1001F7147 /* PBXContainerItemProxy */;
+		};
+		DC37B62D0D668DF9001F7147 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC37B6260D668DCD001F7147 /* PowerStateCycler */;
+			targetProxy = DC37B62C0D668DF9001F7147 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91DA08733DB10010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = com.apple.utility.RegisterAccessor;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = RegisterAccessor;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		1DEB91DB08733DB10010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+				MODULE_NAME = com.apple.utility.RegisterAccessor;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_NAME = RegisterAccessor;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+		1DEB91DE08733DB10010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv6;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/Purple";
+				VALID_ARCHS = armv6;
+			};
+			name = Debug;
+		};
+		1DEB91DF08733DB10010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = armv6;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/Purple";
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALID_ARCHS = armv6;
+			};
+			name = Release;
+		};
+		DC37B0770D665470001F7147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = RegisterAccess;
+				STRIP_INSTALLED_PRODUCT = NO;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		DC37B0780D665470001F7147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = RegisterAccess;
+				STRIP_INSTALLED_PRODUCT = NO;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		DC37B4790D6654CE001F7147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+			};
+			name = Debug;
+		};
+		DC37B47A0D6654CE001F7147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = All;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		DC37B6290D668DCD001F7147 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = PowerStateCycler;
+				STRIP_INSTALLED_PRODUCT = NO;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		DC37B62A0D668DCD001F7147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = PowerStateCycler;
+				STRIP_INSTALLED_PRODUCT = NO;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "RegisterAccessor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91DA08733DB10010E9CD /* Debug */,
+				1DEB91DB08733DB10010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "RegisterAccessor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91DE08733DB10010E9CD /* Debug */,
+				1DEB91DF08733DB10010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC37B0790D66548E001F7147 /* Build configuration list for PBXNativeTarget "RegisterAccess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC37B0770D665470001F7147 /* Debug */,
+				DC37B0780D665470001F7147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC37B47F0D6654EF001F7147 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC37B4790D6654CE001F7147 /* Debug */,
+				DC37B47A0D6654CE001F7147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC37B6320D668E10001F7147 /* Build configuration list for PBXNativeTarget "PowerStateCycler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC37B6290D668DCD001F7147 /* Debug */,
+				DC37B62A0D668DCD001F7147 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

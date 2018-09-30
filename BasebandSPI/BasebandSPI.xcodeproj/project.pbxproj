@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D5300D60F216B4B00C5CB60 /* BasebandSPIIFXProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D5300D40F216B4B00C5CB60 /* BasebandSPIIFXProtocol.cpp */; };
+		0D5300D70F216B4B00C5CB60 /* BasebandSPIIFXProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5300D50F216B4B00C5CB60 /* BasebandSPIIFXProtocol.h */; };
+		0DBE3BB20D18767700CEC4FE /* BasebandSPILogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE3BB00D18767700CEC4FE /* BasebandSPILogger.cpp */; };
+		0DBE3BB30D18767700CEC4FE /* BasebandSPILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DBE3BB10D18767700CEC4FE /* BasebandSPILogger.h */; };
+		0DC216A70EC6D4840095689C /* BasebandSPIConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DC216A60EC6D4840095689C /* BasebandSPIConfig.h */; };
+		0DDB2E580EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion1.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DDB2E540EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion1.h */; };
+		0DDB2E590EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB2E550EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion2.cpp */; };
+		0DDB2E5A0EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion2.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DDB2E560EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion2.h */; };
+		0DDB2E5B0EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB2E570EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion1.cpp */; };
+		0DDB2E670EF3C8AA00F0E4A6 /* BasebandSPICommandQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB2E650EF3C8AA00F0E4A6 /* BasebandSPICommandQueue.cpp */; };
+		0DDB2E680EF3C8AA00F0E4A6 /* BasebandSPICommandQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DDB2E660EF3C8AA00F0E4A6 /* BasebandSPICommandQueue.h */; };
+		DC4256230E07120E00E0636A /* AppleS5LFamilyBasebandSPIController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC4256210E07120E00E0636A /* AppleS5LFamilyBasebandSPIController.h */; };
+		DC4256240E07120E00E0636A /* AppleS5LFamilyBasebandSPIController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4256220E07120E00E0636A /* AppleS5LFamilyBasebandSPIController.cpp */; };
+		DC4257930E084B8600E0636A /* AppleS5L8920XBasebandSPIController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4256070E070EC800E0636A /* AppleS5L8920XBasebandSPIController.cpp */; };
+		DC4257940E084B8700E0636A /* AppleS5L8920XBasebandSPIController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC4256060E070EC800E0636A /* AppleS5L8920XBasebandSPIController.h */; };
+		DC4D38630C3F8AAC0088C1A7 /* BasebandSPIDebug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4D38620C3F8AAC0088C1A7 /* BasebandSPIDebug.cpp */; };
+		DC7E54A20C3CF87800B7D071 /* AppleS5L8900XBasebandSPIController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC7E54970C3CF87800B7D071 /* AppleS5L8900XBasebandSPIController.cpp */; };
+		DC7E54A30C3CF87800B7D071 /* AppleS5L8900XBasebandSPIController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7E54980C3CF87800B7D071 /* AppleS5L8900XBasebandSPIController.h */; settings = {ATTRIBUTES = (); }; };
+		DC7E54A60C3CF87800B7D071 /* BasebandSPICommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC7E549B0C3CF87800B7D071 /* BasebandSPICommand.cpp */; };
+		DC7E54A70C3CF87800B7D071 /* BasebandSPICommand.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7E549C0C3CF87800B7D071 /* BasebandSPICommand.h */; settings = {ATTRIBUTES = (); }; };
+		DC7E54A80C3CF87800B7D071 /* BasebandSPIController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC7E549D0C3CF87800B7D071 /* BasebandSPIController.cpp */; };
+		DC7E54A90C3CF87800B7D071 /* BasebandSPIController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7E549E0C3CF87800B7D071 /* BasebandSPIController.h */; settings = {ATTRIBUTES = (); }; };
+		DC7E54AA0C3CF87800B7D071 /* BasebandSPIDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7E549F0C3CF87800B7D071 /* BasebandSPIDebug.h */; settings = {ATTRIBUTES = (); }; };
+		DC7E54AB0C3CF87800B7D071 /* BasebandSPIDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC7E54A00C3CF87800B7D071 /* BasebandSPIDevice.cpp */; };
+		DC7E54AC0C3CF87800B7D071 /* BasebandSPIDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7E54A10C3CF87800B7D071 /* BasebandSPIDevice.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DC8DFDC20C3CD29B0061D456 /* BasebandSPIProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC8DFDB50C3CD29B0061D456 /* BasebandSPIProtocol.cpp */; };
+		DC8DFDC30C3CD29B0061D456 /* BasebandSPIProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC8DFDB60C3CD29B0061D456 /* BasebandSPIProtocol.h */; settings = {ATTRIBUTES = (); }; };
+		DC9AB9730E19F180008CEC15 /* BasebandSPIDiagnostics.h in Headers */ = {isa = PBXBuildFile; fileRef = DC9AB9710E19F180008CEC15 /* BasebandSPIDiagnostics.h */; };
+		DC9AB9740E19F180008CEC15 /* BasebandSPIDiagnostics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC9AB9720E19F180008CEC15 /* BasebandSPIDiagnostics.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D5300D40F216B4B00C5CB60 /* BasebandSPIIFXProtocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPIIFXProtocol.cpp; sourceTree = "<group>"; };
+		0D5300D50F216B4B00C5CB60 /* BasebandSPIIFXProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasebandSPIIFXProtocol.h; sourceTree = "<group>"; };
+		0DBE3BB00D18767700CEC4FE /* BasebandSPILogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPILogger.cpp; sourceTree = "<group>"; };
+		0DBE3BB10D18767700CEC4FE /* BasebandSPILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasebandSPILogger.h; sourceTree = "<group>"; };
+		0DC216A60EC6D4840095689C /* BasebandSPIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasebandSPIConfig.h; sourceTree = "<group>"; };
+		0DDB2E540EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasebandSPIIFXProtocolVersion1.h; sourceTree = "<group>"; };
+		0DDB2E550EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPIIFXProtocolVersion2.cpp; sourceTree = "<group>"; };
+		0DDB2E560EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasebandSPIIFXProtocolVersion2.h; sourceTree = "<group>"; };
+		0DDB2E570EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPIIFXProtocolVersion1.cpp; sourceTree = "<group>"; };
+		0DDB2E650EF3C8AA00F0E4A6 /* BasebandSPICommandQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPICommandQueue.cpp; sourceTree = "<group>"; };
+		0DDB2E660EF3C8AA00F0E4A6 /* BasebandSPICommandQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasebandSPICommandQueue.h; sourceTree = "<group>"; };
+		32D94FCF0562CBF700B6AF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC4256060E070EC800E0636A /* AppleS5L8920XBasebandSPIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleS5L8920XBasebandSPIController.h; sourceTree = "<group>"; };
+		DC4256070E070EC800E0636A /* AppleS5L8920XBasebandSPIController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleS5L8920XBasebandSPIController.cpp; sourceTree = "<group>"; };
+		DC4256210E07120E00E0636A /* AppleS5LFamilyBasebandSPIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleS5LFamilyBasebandSPIController.h; sourceTree = "<group>"; };
+		DC4256220E07120E00E0636A /* AppleS5LFamilyBasebandSPIController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppleS5LFamilyBasebandSPIController.cpp; sourceTree = "<group>"; };
+		DC4D38620C3F8AAC0088C1A7 /* BasebandSPIDebug.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPIDebug.cpp; sourceTree = "<group>"; };
+		DC4D389B0C3F9DA70088C1A7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /Developer/SDKs/Purple/System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		DC590C560EF0D30C00F0CCFF /* BasebandSPIReturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasebandSPIReturn.h; sourceTree = "<group>"; };
+		DC7E54970C3CF87800B7D071 /* AppleS5L8900XBasebandSPIController.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = AppleS5L8900XBasebandSPIController.cpp; sourceTree = "<group>"; };
+		DC7E54980C3CF87800B7D071 /* AppleS5L8900XBasebandSPIController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AppleS5L8900XBasebandSPIController.h; sourceTree = "<group>"; };
+		DC7E549B0C3CF87800B7D071 /* BasebandSPICommand.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPICommand.cpp; sourceTree = "<group>"; };
+		DC7E549C0C3CF87800B7D071 /* BasebandSPICommand.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BasebandSPICommand.h; sourceTree = "<group>"; };
+		DC7E549D0C3CF87800B7D071 /* BasebandSPIController.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPIController.cpp; sourceTree = "<group>"; };
+		DC7E549E0C3CF87800B7D071 /* BasebandSPIController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BasebandSPIController.h; sourceTree = "<group>"; };
+		DC7E549F0C3CF87800B7D071 /* BasebandSPIDebug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BasebandSPIDebug.h; sourceTree = "<group>"; };
+		DC7E54A00C3CF87800B7D071 /* BasebandSPIDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPIDevice.cpp; sourceTree = "<group>"; };
+		DC7E54A10C3CF87800B7D071 /* BasebandSPIDevice.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BasebandSPIDevice.h; sourceTree = "<group>"; };
+		DC8D05BF0C3CD30B0061D456 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
+		DC8DFDB50C3CD29B0061D456 /* BasebandSPIProtocol.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPIProtocol.cpp; sourceTree = "<group>"; };
+		DC8DFDB60C3CD29B0061D456 /* BasebandSPIProtocol.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = BasebandSPIProtocol.h; sourceTree = "<group>"; };
+		DC9AB9710E19F180008CEC15 /* BasebandSPIDiagnostics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasebandSPIDiagnostics.h; sourceTree = "<group>"; };
+		DC9AB9720E19F180008CEC15 /* BasebandSPIDiagnostics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasebandSPIDiagnostics.cpp; sourceTree = "<group>"; };
+		DCE8E5930DAFF6920061F1F9 /* BasebandSPI.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasebandSPI.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32D94FCB0562CBF700B6AF17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* AppleBaseband */ = {
+			isa = PBXGroup;
+			children = (
+				DC75FE2D0C95D1C40011D71D /* Debug */,
+				247142CAFF3F8F9811CA285C /* BasebandSPI */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				DC4D389B0C3F9DA70088C1A7 /* IOKit.framework */,
+				DC8D05BF0C3CD30B0061D456 /* Kernel.framework */,
+			);
+			name = AppleBaseband;
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32D94FCF0562CBF700B6AF17 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0DDB2E4D0EF3C4A100F0E4A6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DC8DFDB60C3CD29B0061D456 /* BasebandSPIProtocol.h */,
+				DC8DFDB50C3CD29B0061D456 /* BasebandSPIProtocol.cpp */,
+				0D5300D50F216B4B00C5CB60 /* BasebandSPIIFXProtocol.h */,
+				0D5300D40F216B4B00C5CB60 /* BasebandSPIIFXProtocol.cpp */,
+				0DDB2E540EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion1.h */,
+				0DDB2E570EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion1.cpp */,
+				0DDB2E560EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion2.h */,
+				0DDB2E550EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion2.cpp */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCE8E5930DAFF6920061F1F9 /* BasebandSPI.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		247142CAFF3F8F9811CA285C /* BasebandSPI */ = {
+			isa = PBXGroup;
+			children = (
+				0DDB2E4D0EF3C4A100F0E4A6 /* Protocol */,
+				DC590C570EF0D35900F0CCFF /* Controller */,
+				DC590C560EF0D30C00F0CCFF /* BasebandSPIReturn.h */,
+				0DBE3BB00D18767700CEC4FE /* BasebandSPILogger.cpp */,
+				0DBE3BB10D18767700CEC4FE /* BasebandSPILogger.h */,
+				0DC216A60EC6D4840095689C /* BasebandSPIConfig.h */,
+				DC7E549F0C3CF87800B7D071 /* BasebandSPIDebug.h */,
+				DC4D38620C3F8AAC0088C1A7 /* BasebandSPIDebug.cpp */,
+				DC7E549B0C3CF87800B7D071 /* BasebandSPICommand.cpp */,
+				DC7E549C0C3CF87800B7D071 /* BasebandSPICommand.h */,
+				0DDB2E650EF3C8AA00F0E4A6 /* BasebandSPICommandQueue.cpp */,
+				0DDB2E660EF3C8AA00F0E4A6 /* BasebandSPICommandQueue.h */,
+				DC7E54A00C3CF87800B7D071 /* BasebandSPIDevice.cpp */,
+				DC7E54A10C3CF87800B7D071 /* BasebandSPIDevice.h */,
+				DC9AB9710E19F180008CEC15 /* BasebandSPIDiagnostics.h */,
+				DC9AB9720E19F180008CEC15 /* BasebandSPIDiagnostics.cpp */,
+			);
+			name = BasebandSPI;
+			sourceTree = "<group>";
+		};
+		DC590C570EF0D35900F0CCFF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC7E549E0C3CF87800B7D071 /* BasebandSPIController.h */,
+				DC7E549D0C3CF87800B7D071 /* BasebandSPIController.cpp */,
+				DC4256210E07120E00E0636A /* AppleS5LFamilyBasebandSPIController.h */,
+				DC4256220E07120E00E0636A /* AppleS5LFamilyBasebandSPIController.cpp */,
+				DC7E54970C3CF87800B7D071 /* AppleS5L8900XBasebandSPIController.cpp */,
+				DC7E54980C3CF87800B7D071 /* AppleS5L8900XBasebandSPIController.h */,
+				DC4256070E070EC800E0636A /* AppleS5L8920XBasebandSPIController.cpp */,
+				DC4256060E070EC800E0636A /* AppleS5L8920XBasebandSPIController.h */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DC75FE2D0C95D1C40011D71D /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Debug;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		32D94FC50562CBF700B6AF17 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8DFDC30C3CD29B0061D456 /* BasebandSPIProtocol.h in Headers */,
+				DC7E54A30C3CF87800B7D071 /* AppleS5L8900XBasebandSPIController.h in Headers */,
+				DC7E54A70C3CF87800B7D071 /* BasebandSPICommand.h in Headers */,
+				DC7E54A90C3CF87800B7D071 /* BasebandSPIController.h in Headers */,
+				DC7E54AA0C3CF87800B7D071 /* BasebandSPIDebug.h in Headers */,
+				DC7E54AC0C3CF87800B7D071 /* BasebandSPIDevice.h in Headers */,
+				0DBE3BB30D18767700CEC4FE /* BasebandSPILogger.h in Headers */,
+				DC4256230E07120E00E0636A /* AppleS5LFamilyBasebandSPIController.h in Headers */,
+				DC4257940E084B8700E0636A /* AppleS5L8920XBasebandSPIController.h in Headers */,
+				DC9AB9730E19F180008CEC15 /* BasebandSPIDiagnostics.h in Headers */,
+				0DC216A70EC6D4840095689C /* BasebandSPIConfig.h in Headers */,
+				0DDB2E580EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion1.h in Headers */,
+				0DDB2E5A0EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion2.h in Headers */,
+				0DDB2E680EF3C8AA00F0E4A6 /* BasebandSPICommandQueue.h in Headers */,
+				0D5300D70F216B4B00C5CB60 /* BasebandSPIIFXProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		32D94FC30562CBF700B6AF17 /* BasebandSPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "BasebandSPI" */;
+			buildPhases = (
+				32D94FC50562CBF700B6AF17 /* Headers */,
+				32D94FC90562CBF700B6AF17 /* Sources */,
+				32D94FC70562CBF700B6AF17 /* Resources */,
+				32D94FCB0562CBF700B6AF17 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasebandSPI;
+			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+			productName = AppleBaseband;
+			productReference = DCE8E5930DAFF6920061F1F9 /* BasebandSPI.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0610;
+			};
+			buildConfigurationList = 1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "BasebandSPI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* AppleBaseband */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32D94FC30562CBF700B6AF17 /* BasebandSPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32D94FC70562CBF700B6AF17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32D94FC90562CBF700B6AF17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8DFDC20C3CD29B0061D456 /* BasebandSPIProtocol.cpp in Sources */,
+				DC7E54A20C3CF87800B7D071 /* AppleS5L8900XBasebandSPIController.cpp in Sources */,
+				DC7E54A60C3CF87800B7D071 /* BasebandSPICommand.cpp in Sources */,
+				DC7E54A80C3CF87800B7D071 /* BasebandSPIController.cpp in Sources */,
+				DC7E54AB0C3CF87800B7D071 /* BasebandSPIDevice.cpp in Sources */,
+				DC4D38630C3F8AAC0088C1A7 /* BasebandSPIDebug.cpp in Sources */,
+				0DBE3BB20D18767700CEC4FE /* BasebandSPILogger.cpp in Sources */,
+				DC4256240E07120E00E0636A /* AppleS5LFamilyBasebandSPIController.cpp in Sources */,
+				DC4257930E084B8600E0636A /* AppleS5L8920XBasebandSPIController.cpp in Sources */,
+				DC9AB9740E19F180008CEC15 /* BasebandSPIDiagnostics.cpp in Sources */,
+				0DDB2E590EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion2.cpp in Sources */,
+				0DDB2E5B0EF3C4BC00F0E4A6 /* BasebandSPIIFXProtocolVersion1.cpp in Sources */,
+				0DDB2E670EF3C8AA00F0E4A6 /* BasebandSPICommandQueue.cpp in Sources */,
+				0D5300D60F216B4B00C5CB60 /* BasebandSPIIFXProtocol.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91DA08733DB10010E9CD /* Debug-Simple */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_THUMB_SUPPORT = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				MODULE_NAME = com.apple.driver.BasebandSPI;
+				MODULE_VERSION = 1.0.0;
+				PREBINDING = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/IOKit/baseband";
+				PRODUCT_NAME = BasebandSPI;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/baseband";
+				SDKROOT = iphoneos.internal;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Debug-Simple";
+		};
+		1DEB91DE08733DB10010E9CD /* Debug-Simple */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DDEBUG";
+				PREBINDING = NO;
+				SDKROOT = iphoneos.internal;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+			};
+			name = "Debug-Simple";
+		};
+		DCF97DA80C5E69050005EFB2 /* Release-Simple */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_THUMB_SUPPORT = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				MODULE_NAME = com.apple.driver.BasebandSPI;
+				MODULE_VERSION = 1.0.0;
+				PREBINDING = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/IOKit/baseband";
+				PRODUCT_NAME = BasebandSPI;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/baseband";
+				SDKROOT = iphoneos.internal;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release-Simple";
+		};
+		DCF97DA90C5E69050005EFB2 /* Release-Reliable */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_THUMB_SUPPORT = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				MODULE_NAME = com.apple.driver.BasebandSPI;
+				MODULE_VERSION = 1.0.0;
+				PREBINDING = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/IOKit/baseband";
+				PRODUCT_NAME = BasebandSPI;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/baseband";
+				SDKROOT = iphoneos.internal;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Release-Reliable";
+		};
+		DCF97DAA0C5E69050005EFB2 /* Debug-Reliable */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_THUMB_SUPPORT = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				MODULE_NAME = com.apple.driver.BasebandSPI;
+				MODULE_VERSION = 1.0.0;
+				PREBINDING = YES;
+				PRIVATE_HEADERS_FOLDER_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Kernel.framework/Versions/A/PrivateHeaders/IOKit/baseband";
+				PRODUCT_NAME = BasebandSPI;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Kernel.framework/Versions/A/Headers/IOKit/baseband";
+				SDKROOT = iphoneos.internal;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = "Debug-Reliable";
+		};
+		DCF97DAE0C5E69050005EFB2 /* Release-Simple */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DRELEASE";
+				PREBINDING = NO;
+				SDKROOT = iphoneos.internal;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+			};
+			name = "Release-Simple";
+		};
+		DCF97DAF0C5E69050005EFB2 /* Release-Reliable */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = (
+					"-DRELEASE",
+					"-DRELIABLE",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos.internal;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+			};
+			name = "Release-Reliable";
+		};
+		DCF97DB00C5E69050005EFB2 /* Debug-Reliable */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DRELIABLE",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos.internal;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+			};
+			name = "Debug-Reliable";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "BasebandSPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF97DA80C5E69050005EFB2 /* Release-Simple */,
+				1DEB91DA08733DB10010E9CD /* Debug-Simple */,
+				DCF97DA90C5E69050005EFB2 /* Release-Reliable */,
+				DCF97DAA0C5E69050005EFB2 /* Debug-Reliable */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release-Simple";
+		};
+		1DEB91DD08733DB10010E9CD /* Build configuration list for PBXProject "BasebandSPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF97DAE0C5E69050005EFB2 /* Release-Simple */,
+				1DEB91DE08733DB10010E9CD /* Debug-Simple */,
+				DCF97DAF0C5E69050005EFB2 /* Release-Reliable */,
+				DCF97DB00C5E69050005EFB2 /* Debug-Reliable */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release-Simple";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

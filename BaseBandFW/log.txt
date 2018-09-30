@@ -1,0 +1,826 @@
+***********************************
+  Gold Key: G3
+  Master Key: M3
+  SEC Key: S2
+  Timestamp: 2012-12-11 18:50:02
+  User: puneet
+***********************************
+
+MD5 of NuFlsSign in Bootcore_sign folder: MD5(NuFlsSign)= 37fab5f6cecb3931f15a882fcf8b45a2
+MD5 of ebl_sg3.fls: MD5(ebl_sg3.fls)= 9b333b282723a297d383f4c4d49880b7
+MD5 of psi_flash.fls: MD5(psi_flash.fls)= f8c69fb803a8cc92627c771fa5c722f0
+MD5 of psi_ram.fls: MD5(psi_ram.fls)= ce37dfc5859fd611bc95f24fb58b0d79
+
+***********************************
+
+contents of ebl_signing-hsm.txt: 
+//*********************************************************
+// Copyright (c) 2005 Infineon Technologies Denmark A/S
+//
+// Reviewed: 5/12/08
+//*********************************************************
+LOG
+Section CODE
+//TODO: Salt 0 Supported?
+SignFormat 1
+Key M1Key.key 1
+GenSign 0x86000 0xDD00 0x93D00
+Key M3Key.key 0
+GenSign 0x86000 0xDD00 0x93D00
+ENDcontents of psi_flash_signing-hsm.txt: 
+//*********************************************************
+//
+// Script file for FlsSign
+// Copyright (c) 2005 Infineon Technologies Denmark A/S
+//
+// Reviewed: 5/12/08
+// This is only for creating preflash. We do not update Flash-PSI in field
+//*********************************************************
+LOG
+Section BOOT_CORE_SLB
+//TODO: Salt 0 ?
+SkipVersionCheck 0
+SignFormat 2
+Key G3Key.key 2
+EblVersion 0x0 0x20000000
+GenSign 0x20000000 0xBF00 0x2000BF00
+END
+
+contents of psi_ram_signing-hsm.txt: 
+
+contents of signBootcore-hsm.sh
+
+echo "--- Signing bootcore ---"
+echo -n "Password: "
+
+stty -echo
+read password
+stty echo
+
+echo ""         # force a carriage return to be output
+
+echo "------- Signing ebl_ram --------------------------------------"
+echo "" # force a carriage return
+if (./NuFlsSign --script ebl_signing-hsm.txt ebl_sg3.fls --output hsm-signed-ebl_ram.fls -P $password) then
+	echo "**ebl_ram signed**"
+else
+	echo "failed to sign ebl_ram"
+fi
+echo "------- Signing psi_flash -------"
+echo "" # force a carriage return
+if (./NuFlsSign --script psi_flash_signing-hsm.txt psi_flash.fls --output ICE2_BOOT_AA.BB_GXMYSZ.fls --password $password) then
+	echo "**signing succeeded.**"
+else
+	echo "failed to sign psi_flash"
+fi
+
+echo -n "MD5 of hsm-signed-ebl_ram.fls: "
+openssl md5 hsm-signed-ebl_ram.fls
+echo -n "MD5 of ICE2_BOOT_AA.BB_GXMYSZ.fls: "
+openssl md5 ICE2_BOOT_AA.BB_GXMYSZ.fls
+
+
+***********************************
+***********************************
+***********************************
+***********************************
+
+
+
+--- Signing bootcore ---
+Password: 
+------- Signing ebl_ram --------------------------------------
+
+
+NuFlsSign version 2.4 - Infineon Technologies
+Script file:  ebl_signing-hsm.txt
+Output file:  hsm-signed-ebl_ram.fls
+Using password provided
+Input files:  ebl_sg3.fls 
+
+Processing file: ebl_sg3.fls
+LOG:
+Section: CODE
+//TODO: Salt 0 Supported?
+Format: 1
+Now using keytype: 1
+GenSign:
+load region  0:
+StartAddr:   00086000
+TotalLength: 0000E000
+UsedLength:  000085C8
+load region  1:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  2:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  3:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  4:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  5:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  6:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  7:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+
+calc Area sign...
+Sign: 94E14484 70CA9A59 2DC77F53 6B9DB257 83370791
+Signing via services
+Initiating sign service...
+Signature Length: 128 (Response code 0)
+Encrypted:
+0x45, 0xC9, 0x6B, 0x6D, 0x9B, 0x9F, 0xDF, 0xC7, 
+0x57, 0xF3, 0x6B, 0x66, 0x61, 0x37, 0xE6, 0xC0, 
+0xE8, 0x3F, 0xCD, 0x6C, 0x62, 0x91, 0x5A, 0xD6, 
+0x4C, 0x46, 0x69, 0x79, 0x84, 0x64, 0xCF, 0xFF, 
+0xF9, 0x5C, 0x65, 0x35, 0xFB, 0x14, 0x4B, 0x6E, 
+0x83, 0xC0, 0x6D, 0xEB, 0x50, 0x8E, 0x30, 0xB1, 
+0x58, 0xB9, 0xF7, 0xC1, 0xB2, 0xEA, 0xF4, 0xD6, 
+0x28, 0x0E, 0xC9, 0x2B, 0x71, 0x4F, 0xE2, 0xD6, 
+0x3E, 0xA4, 0x63, 0xA1, 0xF2, 0x72, 0xCF, 0x57, 
+0x7C, 0x07, 0xD6, 0x78, 0x65, 0x84, 0xA4, 0x47, 
+0x14, 0x10, 0xB7, 0xED, 0xFD, 0x2B, 0x5E, 0xFD, 
+0x6F, 0x14, 0x06, 0xBF, 0xB4, 0x19, 0xE2, 0x5C, 
+0x32, 0x62, 0xDF, 0x76, 0xD3, 0xB7, 0x10, 0x34, 
+0xC7, 0x5F, 0xC5, 0x80, 0x7E, 0x02, 0x74, 0x3A, 
+0x42, 0x8C, 0x2A, 0x8E, 0x43, 0xC8, 0xE2, 0x7F, 
+0xEB, 0x98, 0x19, 0x5C, 0x74, 0x62, 0x26, 0x10, 
+
+load region  0:
+StartAddr:   00086000
+TotalLength: 0000E000
+UsedLength:  0000DF00
+load region  1:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  2:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  3:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  4:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  5:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  6:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  7:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+
+Now using keytype: 0
+GenSign:
+load region  0:
+StartAddr:   00086000
+TotalLength: 0000E000
+UsedLength:  0000DF00
+load region  1:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  2:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  3:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  4:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  5:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  6:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  7:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+
+calc Area sign...
+Sign: 94E14484 70CA9A59 2DC77F53 6B9DB257 83370791
+Signing via services
+Initiating sign service...
+Signature Length: 128 (Response code 0)
+Encrypted:
+0xB3, 0x39, 0xF2, 0x29, 0xA5, 0x24, 0x33, 0xD6, 
+0x7C, 0x05, 0x1C, 0xCA, 0xBA, 0x68, 0x58, 0x38, 
+0xA8, 0xF3, 0x3F, 0x9F, 0xB3, 0x0A, 0xB8, 0x83, 
+0xF5, 0x42, 0xAD, 0xCD, 0xA0, 0xCA, 0xA6, 0x98, 
+0x25, 0x27, 0x1D, 0x4B, 0xBB, 0x77, 0x67, 0x1A, 
+0xEC, 0x03, 0x16, 0x30, 0xC0, 0xDE, 0x84, 0xCB, 
+0xBD, 0x35, 0xB5, 0x97, 0x3A, 0xE9, 0x78, 0xA5, 
+0x66, 0x2F, 0x0C, 0x43, 0xA2, 0xC1, 0x4E, 0xDB, 
+0x1F, 0xDD, 0xDB, 0x62, 0xF0, 0xC8, 0x7D, 0x24, 
+0x21, 0x66, 0x00, 0xA5, 0x34, 0x4F, 0xE5, 0xC9, 
+0x68, 0xF7, 0x82, 0x28, 0xAB, 0x0B, 0xED, 0x09, 
+0xA9, 0x1F, 0x2F, 0x18, 0x13, 0x84, 0x51, 0x66, 
+0x4D, 0x96, 0x27, 0x49, 0x2E, 0xB1, 0x67, 0x52, 
+0x9F, 0xAA, 0x57, 0x57, 0xB1, 0xCA, 0x6B, 0x0A, 
+0x54, 0x2B, 0x35, 0x72, 0x13, 0x8E, 0xC1, 0xEC, 
+0xE7, 0xA2, 0x7B, 0x63, 0xB3, 0x9C, 0xA2, 0x68, 
+
+load region  0:
+StartAddr:   00086000
+TotalLength: 0000E000
+UsedLength:  0000DF00
+load region  1:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  2:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  3:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  4:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  5:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  6:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  7:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+
+**ebl_ram signed**
+------- Signing psi_flash -------
+
+
+NuFlsSign version 2.4 - Infineon Technologies
+Script file:  psi_flash_signing-hsm.txt
+Output file:  ICE2_BOOT_AA.BB_GXMYSZ.fls
+Using password provided
+Input files:  psi_flash.fls 
+
+Processing file: psi_flash.fls
+LOG:
+Section: BOOT_CORE_SLB
+//TODO: Salt 0 ?
+VersionCheck active
+Format: 2
+Now using keytype: 2
+EblVersion 0
+GenSign:
+load region  0:
+StartAddr:   20000000
+TotalLength: 0000C000
+UsedLength:  00008A3C
+load region  1:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  2:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  3:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  4:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  5:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  6:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  7:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+
+calc Area sign...
+Sign: B6EAF0DB 167A56A6 E2010052 02537679 1B3CA6C8
+Signing via services
+Initiating sign service...
+Signature Length: 128 (Response code 0)
+Encrypted:
+0x99, 0x64, 0xD1, 0x40, 0x6D, 0x64, 0x37, 0xD8, 
+0x44, 0x3A, 0x53, 0x42, 0x92, 0xF7, 0x61, 0xC5, 
+0x4A, 0xBA, 0x21, 0x91, 0x0C, 0x3C, 0xF8, 0x0A, 
+0xFD, 0xEA, 0x1E, 0x91, 0x01, 0x87, 0x66, 0x7A, 
+0x89, 0xF3, 0x20, 0xD5, 0x87, 0x5F, 0xD4, 0x96, 
+0xD0, 0xAB, 0xAC, 0xC3, 0x57, 0x9E, 0xB9, 0xE5, 
+0x50, 0xF6, 0x8B, 0xF3, 0xFA, 0xBF, 0xED, 0x29, 
+0x13, 0x27, 0x36, 0x96, 0x03, 0xE1, 0xEF, 0x9D, 
+0x17, 0xFA, 0xB1, 0x88, 0x10, 0x27, 0x9E, 0xF5, 
+0x94, 0xE7, 0xE2, 0xD7, 0x76, 0x47, 0x62, 0x0C, 
+0x3C, 0x54, 0xDF, 0x8B, 0x65, 0x9C, 0xE1, 0xDD, 
+0x5E, 0x2A, 0x99, 0x22, 0x46, 0x22, 0x18, 0x13, 
+0x3B, 0x0F, 0x79, 0x56, 0x7E, 0x57, 0x17, 0xD8, 
+0x1E, 0xDF, 0x85, 0x56, 0x6C, 0xCE, 0x85, 0xC4, 
+0x71, 0xA9, 0x15, 0xDD, 0x36, 0x75, 0x82, 0x9A, 
+0x8F, 0xBA, 0x58, 0xA9, 0x8C, 0x9C, 0x32, 0x64, 
+
+load region  0:
+StartAddr:   20000000
+TotalLength: 0000C000
+UsedLength:  0000C000
+load region  1:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  2:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  3:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  4:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  5:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  6:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  7:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+
+**signing succeeded.**
+MD5 of hsm-signed-ebl_ram.fls: MD5(hsm-signed-ebl_ram.fls)= fe7901abccd73f0a3cffb75259b473ad
+MD5 of ICE2_BOOT_AA.BB_GXMYSZ.fls: MD5(ICE2_BOOT_AA.BB_GXMYSZ.fls)= 25d972fb3b3f0d4abeef96773934463b
+***********************************
+***********************************
+***********************************
+***********************************
+
+
+
+MD5 of NuFlsSign in Stack_sign folder: MD5(NuFlsSign)= 37fab5f6cecb3931f15a882fcf8b45a2
+MD5 of ICE2.fls: MD5(ICE2.fls)= 7ba76e5560b2ffa1c374ca5c0b3fd85d
+MD5 of ICE2.eep: MD5(ICE2.eep)= 2294c0e56053f8f570d1064ab4f2d2b2
+
+***********************************
+
+contents of system_signing_eep-hsm.txt: 
+//*********************************************************
+// Copyright (c) 2005 Infineon Technologies Denmark A/S
+//
+// Reviewed: 5/16/08
+//*********************************************************
+LOG
+Section STAT_EEP
+SkipVersionCheck 0
+//TODO: Salt 0 ?
+SignFormat 1 
+EblVersion 0x0 0x20FC0010
+Key M1Key.key 1
+SignFile
+Key M3Key.key 0
+SignFile
+END
+
+
+contents of system_signing-hsm.txt: 
+//*********************************************************
+// Copyright (c) 2005 Infineon Technologies Denmark A/S
+//
+// Reviewed: 5/12/08
+//*********************************************************
+LOG
+Section CODE
+//TODO: Salt 0 ?
+SkipVersionCheck 0
+SignFormat 1 
+Eblversion 0x0 0x20040C48
+Key M1Key.key 1
+GenRegionSign 0x20040200 0x20040000
+Key M3Key.key 0
+GenRegionSign 0x20040200 0x20040000
+Key M1Key.key 1
+SignFile
+Key M3Key.key 0
+SignFile
+END
+contents of signSystem-hsm.sh
+timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
+
+echo "--- Now signing stack firmware ---"
+echo -n "Password: "
+
+stty -echo
+read password
+stty echo
+
+echo ""         # force a carriage return to be output
+
+echo "--------- Removing the default Bootcore from the system file ----------------------------------------------------------------"
+echo "" # force a carriage return
+if (./NuFlsSign -p --removeboot ICE2.fls --output ICE2_noboot.fls) then
+	echo "**bootcore removed**"
+else
+	echo "failed to remove bootcore"
+fi
+echo "--------- Injecting signed psi_ram and ebl_ram and signing psi_flash; psi ram injection for testing purposes only -----------"
+echo "" # force a carriage return
+if (./NuFlsSign --script system_signing-hsm.txt --psi ../Bootcore_sign/psi_ram.fls --ebl ../Bootcore_sign/hsm-signed-ebl_ram.fls ICE2_noboot.fls --output ICE2_XX.YY.ZZ.fls --password $password) then
+	echo "**signed injected FLS**"
+else
+	echo "failed to sign injected FLS"
+fi
+if (./NuFlsSign --script system_signing_eep-hsm.txt --psi ../Bootcore_sign/psi_ram.fls --ebl ../Bootcore_sign/hsm-signed-ebl_ram.fls ICE2.eep --output ICE2_XX.YY.ZZ.eep --password $password) then
+	echo "**signed injected EEP**"
+else
+	echo "failed to sign injected EEP"
+fi
+
+echo -n "MD5 of ICE2_XX.YY.ZZ.fls: "
+openssl md5 ICE2_XX.YY.ZZ.fls
+echo -n "MD5 of ICE2_XX.YY.ZZ.eep: "
+openssl md5 ICE2_XX.YY.ZZ.eep
+mkdir -p ../outputs/firmware
+mkdir -p ../outputs/firmware/$timestamp
+cp ICE2_XX.YY.ZZ.fls ../outputs/firmware/$timestamp
+cp ICE2_XX.YY.ZZ.eep ../outputs/firmware/$timestamp
+
+--- Now signing stack firmware ---
+Password: 
+--------- Removing the default Bootcore from the system file ----------------------------------------------------------------
+
+
+NuFlsSign version 2.4 - Infineon Technologies
+No signing only pack files
+Remove boot core
+Output file:  ICE2_noboot.fls
+Input files:  ICE2.fls 
+
+Processing file: ICE2.fls
+Removing boot core items
+**bootcore removed**
+--------- Injecting signed psi_ram and ebl_ram and signing psi_flash; psi ram injection for testing purposes only -----------
+
+
+NuFlsSign version 2.4 - Infineon Technologies
+Script file:  system_signing-hsm.txt
+PSI file:     ../Bootcore_sign/psi_ram.fls
+EBL file:     ../Bootcore_sign/hsm-signed-ebl_ram.fls
+Output file:  ICE2_XX.YY.ZZ.fls
+Using password provided
+Input files:  ICE2_noboot.fls 
+
+Processing file: ICE2_noboot.fls
+LOG:
+Section: CODE
+//TODO: Salt 0 ?
+VersionCheck active
+Format: 1
+EblVersion 0
+Now using keytype: 1
+GenRegionSign:
+load region  0:
+StartAddr:   20040000
+TotalLength: 00DC0000
+UsedLength:  00653C70
+
+calc Area sign...
+Sign: 37CA61FE 0479AA52 9C137694 D25F25CB 41A8E4D9
+Signing via services
+Initiating sign service...
+Signature Length: 128 (Response code 0)
+Encrypted:
+0x5E, 0x22, 0x2C, 0x7E, 0x5C, 0x65, 0x3F, 0x8D, 
+0x09, 0x41, 0x59, 0x33, 0x79, 0xFD, 0x60, 0xC1, 
+0xB7, 0xD7, 0x42, 0x72, 0x59, 0x05, 0x8F, 0x7C, 
+0x23, 0x3E, 0x2F, 0xDB, 0xF5, 0x43, 0xCC, 0xE6, 
+0x3C, 0xC1, 0xE9, 0x32, 0xF9, 0x99, 0x38, 0xDB, 
+0x83, 0x6F, 0xC7, 0xEB, 0x23, 0x65, 0xBF, 0x33, 
+0xF8, 0xCA, 0x81, 0x83, 0x86, 0x8C, 0xFA, 0x21, 
+0xA7, 0x25, 0xC0, 0x77, 0x09, 0x46, 0x4D, 0x86, 
+0x0E, 0xB5, 0xA8, 0x49, 0x25, 0x17, 0x91, 0x7C, 
+0x93, 0xAC, 0xF9, 0x36, 0xCF, 0x9A, 0x21, 0x6E, 
+0xD6, 0xE5, 0x6A, 0xF8, 0xC0, 0x60, 0xFE, 0x5A, 
+0x90, 0x6A, 0x8A, 0xCE, 0x19, 0xD7, 0x6D, 0xD2, 
+0x4A, 0x74, 0xFB, 0x73, 0x97, 0x10, 0xA1, 0xD6, 
+0xC9, 0xBC, 0xE3, 0xA6, 0xDB, 0x5C, 0xC3, 0x4F, 
+0x1C, 0x06, 0xC6, 0xA3, 0xD7, 0xD3, 0xDA, 0x62, 
+0x28, 0x5F, 0xDD, 0xE5, 0x4C, 0x5A, 0x58, 0xE0, 
+
+load region  0:
+StartAddr:   20040000
+TotalLength: 00DC0000
+UsedLength:  00653C70
+load region  1:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  2:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  3:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  4:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  5:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  6:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  7:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+
+Now using keytype: 0
+GenRegionSign:
+load region  0:
+StartAddr:   20040000
+TotalLength: 00DC0000
+UsedLength:  00653C70
+
+calc Area sign...
+Sign: 37CA61FE 0479AA52 9C137694 D25F25CB 41A8E4D9
+Signing via services
+Initiating sign service...
+Signature Length: 128 (Response code 0)
+Encrypted:
+0xB8, 0x16, 0x98, 0xEE, 0x6E, 0x28, 0x85, 0x92, 
+0x43, 0x1A, 0x45, 0x9B, 0x78, 0xE2, 0x96, 0xE8, 
+0xFE, 0x6F, 0xA7, 0xA1, 0x2A, 0xFE, 0x3D, 0x0A, 
+0x3A, 0xA4, 0x62, 0xB8, 0xB4, 0x68, 0x0D, 0xC5, 
+0x0D, 0x0F, 0xA2, 0xCF, 0xB2, 0x8C, 0x85, 0xDF, 
+0x1C, 0x77, 0xFB, 0x69, 0x26, 0x96, 0xBA, 0x7D, 
+0xD8, 0x71, 0x89, 0xE8, 0x21, 0x39, 0x51, 0xE7, 
+0x31, 0x82, 0x90, 0x50, 0x8F, 0x57, 0x20, 0xBE, 
+0xED, 0x22, 0xCA, 0x08, 0xE5, 0x9B, 0xD1, 0x47, 
+0xD5, 0x53, 0x54, 0x74, 0x58, 0x03, 0xCD, 0xAE, 
+0xFD, 0x54, 0xC4, 0x1C, 0x7C, 0xDA, 0x4C, 0xCC, 
+0x7A, 0xF8, 0xB4, 0x4F, 0x90, 0x2F, 0x8D, 0x7C, 
+0x2B, 0xF3, 0xA6, 0xB3, 0xC5, 0x87, 0xE9, 0xCF, 
+0x59, 0x90, 0x11, 0x15, 0x3B, 0x0A, 0x3C, 0xCC, 
+0x60, 0x59, 0x6A, 0x45, 0xBC, 0x59, 0x92, 0x9C, 
+0xDD, 0x37, 0x40, 0xC5, 0x83, 0x27, 0x8D, 0x13, 
+
+load region  0:
+StartAddr:   20040000
+TotalLength: 00DC0000
+UsedLength:  00653C70
+load region  1:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  2:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  3:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  4:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  5:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  6:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+load region  7:
+StartAddr:   00000000
+TotalLength: 00000000
+UsedLength:  00000000
+
+Now using keytype: 1
+SignFile:
+calc SEC FLS sign...
+Sign: B297F7FA 5BC5E4FC 61F64D45 40154FB6 FE9926E5
+calc SEC DATA sign...
+Sign: 1FAAD2E9 65628502 ACC420E4 F91FAF42 74A39104
+using SignFile offset 1
+Signing via services
+Initiating sign service...
+Signature Length: 128 (Response code 0)
+Encrypted:
+0x8D, 0x07, 0x05, 0x84, 0x2D, 0xF5, 0x13, 0x1D, 
+0x53, 0x85, 0x35, 0xDF, 0x66, 0x9B, 0xDC, 0x50, 
+0x14, 0xB8, 0xB3, 0x9F, 0x24, 0x09, 0xC6, 0x9C, 
+0xCD, 0xF1, 0x17, 0x3E, 0x34, 0x7C, 0x70, 0xD2, 
+0x7D, 0xEA, 0x8B, 0xB9, 0x0A, 0x64, 0x7B, 0x70, 
+0xF7, 0xC4, 0xE0, 0xD4, 0x5C, 0x24, 0xED, 0x6F, 
+0xEC, 0x43, 0xC1, 0xE5, 0xFF, 0x98, 0x07, 0x1C, 
+0x1F, 0x34, 0xA5, 0x8E, 0x5F, 0x73, 0xE6, 0x39, 
+0x96, 0xC5, 0x58, 0xEE, 0xDC, 0x28, 0xB3, 0xE8, 
+0x32, 0x48, 0x6A, 0xF8, 0x83, 0x5B, 0x16, 0xAD, 
+0xAD, 0x91, 0x4E, 0x4B, 0xAF, 0xF4, 0xD9, 0xED, 
+0x7A, 0x4F, 0xAB, 0xF2, 0x4C, 0xD8, 0xFF, 0x5F, 
+0x7E, 0x35, 0xD8, 0xDC, 0xD7, 0xBC, 0xF7, 0x6D, 
+0xD7, 0xEA, 0x6D, 0x69, 0xB5, 0xDF, 0xDB, 0x8D, 
+0xA1, 0x91, 0xDC, 0x0F, 0x05, 0xD3, 0x1B, 0x99, 
+0x00, 0x76, 0x51, 0x71, 0xAA, 0xF6, 0x85, 0x21, 
+
+Now using keytype: 0
+SignFile:
+calc SEC FLS sign...
+Sign: B297F7FA 5BC5E4FC 61F64D45 40154FB6 FE9926E5
+calc SEC DATA sign...
+Sign: 1FAAD2E9 65628502 ACC420E4 F91FAF42 74A39104
+using SignFile offset 0
+Signing via services
+Initiating sign service...
+Signature Length: 128 (Response code 0)
+Encrypted:
+0x37, 0x19, 0x57, 0x9F, 0xC9, 0x64, 0xA4, 0xB8, 
+0x13, 0xFD, 0x37, 0x09, 0xCD, 0x5E, 0x30, 0xF6, 
+0x71, 0x1D, 0xD2, 0xED, 0x00, 0x13, 0xAA, 0x63, 
+0x40, 0x64, 0xA0, 0x78, 0xA4, 0xDA, 0x35, 0xE4, 
+0x92, 0x04, 0xEF, 0xF2, 0xA6, 0xDD, 0x4D, 0x54, 
+0xD9, 0x9D, 0xB9, 0xB6, 0x04, 0xA0, 0xF5, 0xAA, 
+0xFE, 0x23, 0x91, 0xBD, 0x7D, 0x08, 0xEE, 0x65, 
+0x53, 0x1F, 0x64, 0xC6, 0x09, 0xEC, 0x8B, 0xB2, 
+0xC2, 0x61, 0x62, 0xF9, 0xE0, 0x03, 0x7A, 0x8E, 
+0xC9, 0xF2, 0x4E, 0xD6, 0xDA, 0x3D, 0x8D, 0x24, 
+0xF7, 0xCC, 0x65, 0xD5, 0xC0, 0xFF, 0x67, 0x9E, 
+0xA7, 0x7C, 0x7C, 0x2C, 0x29, 0x48, 0x73, 0xD4, 
+0x70, 0xC2, 0x95, 0x49, 0x59, 0x4D, 0x8A, 0x0D, 
+0xED, 0x81, 0x3E, 0xBA, 0x37, 0x25, 0x3E, 0xD0, 
+0x39, 0xC5, 0x08, 0x78, 0x36, 0xCA, 0x9F, 0xEC, 
+0x9C, 0x28, 0x38, 0x14, 0xFE, 0x2B, 0x1A, 0x17, 
+
+Injecting psi from: ../Bootcore_sign/psi_ram.fls
+WARNING: PSI file contains no version info!
+Injecting ebl from: ../Bootcore_sign/hsm-signed-ebl_ram.fls
+WARNING: EBL file contains no version info!
+**signed injected FLS**
+
+NuFlsSign version 2.4 - Infineon Technologies
+Script file:  system_signing_eep-hsm.txt
+PSI file:     ../Bootcore_sign/psi_ram.fls
+EBL file:     ../Bootcore_sign/hsm-signed-ebl_ram.fls
+Output file:  ICE2_XX.YY.ZZ.eep
+Using password provided
+Input files:  ICE2.eep 
+
+Processing file: ICE2.eep
+LOG:
+Section: STAT_EEP
+VersionCheck active
+//TODO: Salt 0 ?
+Format: 1
+EblVersion 0
+Now using keytype: 1
+SignFile:
+calc SEC FLS sign...
+Sign: 30D64ED4 12A35F7C 6266049C 4D972754 0A8D494B
+calc SEC DATA sign...
+Sign: E4800235 2F3AB830 64217635 BF7F5CC0 234829BC
+using SignFile offset 1
+Signing via services
+Initiating sign service...
+Signature Length: 128 (Response code 0)
+Encrypted:
+0x58, 0x2C, 0xCB, 0x69, 0xC3, 0xBE, 0x81, 0x05, 
+0x80, 0xC1, 0x09, 0x62, 0x3E, 0xF3, 0xA1, 0x0B, 
+0x86, 0x8E, 0x88, 0xF1, 0x11, 0x85, 0x46, 0x0B, 
+0x0F, 0x97, 0x18, 0xCD, 0x5C, 0x8E, 0xBE, 0xF9, 
+0xAB, 0xFA, 0x52, 0x16, 0xB6, 0xDE, 0x00, 0xC0, 
+0xAA, 0xF5, 0xA4, 0x4D, 0x3F, 0xF1, 0xDA, 0x97, 
+0xEB, 0xA4, 0xB1, 0x75, 0x98, 0x05, 0x37, 0x78, 
+0xF7, 0xE7, 0x09, 0xDC, 0xE0, 0x06, 0xC1, 0x00, 
+0x8C, 0x63, 0x35, 0xFE, 0x4B, 0xED, 0xAB, 0x45, 
+0xF3, 0x2B, 0x6E, 0x93, 0xD9, 0xB3, 0x31, 0x87, 
+0x7A, 0xF5, 0xBC, 0x53, 0x3F, 0xC9, 0xA0, 0xE3, 
+0x24, 0x16, 0x65, 0x27, 0xA7, 0x18, 0xD9, 0x9C, 
+0x79, 0x41, 0x3A, 0x5B, 0xCF, 0x91, 0x0E, 0xB6, 
+0xBF, 0xA3, 0x85, 0xF4, 0xB7, 0xF9, 0xE4, 0xE5, 
+0x28, 0xBD, 0x8C, 0xB2, 0xAE, 0x53, 0x72, 0xE6, 
+0x6C, 0xAD, 0x7D, 0x88, 0xBF, 0x72, 0xDA, 0x87, 
+
+Now using keytype: 0
+SignFile:
+calc SEC FLS sign...
+Sign: 30D64ED4 12A35F7C 6266049C 4D972754 0A8D494B
+calc SEC DATA sign...
+Sign: E4800235 2F3AB830 64217635 BF7F5CC0 234829BC
+using SignFile offset 0
+Signing via services
+Initiating sign service...
+Signature Length: 128 (Response code 0)
+Encrypted:
+0xAA, 0x31, 0xC8, 0xA2, 0xF1, 0x4D, 0x35, 0x3F, 
+0xC4, 0x0D, 0xF8, 0x05, 0xA9, 0xF5, 0xFF, 0x93, 
+0x63, 0xB1, 0x3E, 0x00, 0x08, 0x99, 0xE3, 0x30, 
+0xCA, 0xC9, 0x62, 0x02, 0x3C, 0xA1, 0xDB, 0xE1, 
+0xDB, 0xCE, 0x1B, 0xD1, 0x3B, 0x1C, 0xE8, 0xFB, 
+0x4E, 0xD6, 0xE7, 0xA3, 0x42, 0xBB, 0x22, 0x18, 
+0x9F, 0x21, 0x9B, 0x6B, 0x62, 0x04, 0x08, 0xF6, 
+0xCF, 0xAE, 0xC8, 0xA3, 0xC0, 0xC4, 0xE2, 0x15, 
+0xF1, 0x9D, 0x2E, 0x7B, 0x9E, 0x26, 0x62, 0x3E, 
+0xA8, 0xFE, 0xD8, 0xD2, 0x18, 0x32, 0x78, 0xD8, 
+0x72, 0xA0, 0x9D, 0xEE, 0xDB, 0x28, 0x82, 0x13, 
+0x59, 0x7E, 0xBE, 0x7F, 0x70, 0xB8, 0x79, 0x31, 
+0xBA, 0x93, 0xEC, 0x9B, 0x1A, 0xC5, 0x6F, 0x79, 
+0x46, 0x9C, 0xB0, 0x9A, 0x9B, 0xC2, 0x66, 0xF4, 
+0xD9, 0x7D, 0x9C, 0x44, 0xA6, 0xB1, 0xC7, 0x02, 
+0xAF, 0x5B, 0x4B, 0x11, 0x17, 0x53, 0x05, 0x70, 
+
+Injecting psi from: ../Bootcore_sign/psi_ram.fls
+WARNING: PSI file contains no version info!
+Injecting ebl from: ../Bootcore_sign/hsm-signed-ebl_ram.fls
+WARNING: EBL file contains no version info!
+**signed injected EEP**
+MD5 of ICE2_XX.YY.ZZ.fls: MD5(ICE2_XX.YY.ZZ.fls)= 04272e46c5bb03d1cb30cae8c14796ce
+MD5 of ICE2_XX.YY.ZZ.eep: MD5(ICE2_XX.YY.ZZ.eep)= 7d586df5f93be2327e0c8c7035325399
+
+NuFlsSign version 2.4 - Infineon Technologies
+No signing only pack files
+Output file:  ICE2_XX.YY.ZZ_BOOTAA.BB_packed.fls
+Input files:  ICE2_XX.YY.ZZ.eep ../Bootcore_sign/ICE2_BOOT_AA.BB_GXMYSZ.fls ICE2_XX.YY.ZZ.fls 
+
+Processing file: ICE2_XX.YY.ZZ.eep
+
+Removing previously injected elements from input...
+
+Processing file: ../Bootcore_sign/ICE2_BOOT_AA.BB_GXMYSZ.fls
+WARNING: ../Bootcore_sign/ICE2_BOOT_AA.BB_GXMYSZ.fls was generated with a different PRG file than ICE2_XX.YY.ZZ.eep!
+
+
+Processing file: ICE2_XX.YY.ZZ.fls
+WARNING: ICE2_XX.YY.ZZ.fls was generated with a different PRG file than ../Bootcore_sign/ICE2_BOOT_AA.BB_GXMYSZ.fls!
+
+
+NuStripFls version 2.2 - Infineon Technologies
+
+Output file: ICE2_XX.YY.ZZ_BOOTAA.BB.bin
+Input files: ICE2_XX.YY.ZZ_BOOTAA.BB_packed.fls 
+
+Processing file: ICE2_XX.YY.ZZ_BOOTAA.BB_packed.fls
+Processing Memory class: STAT EEP
+Addr:   20FC0000 
+Length: 00005800 
+
+Processing Memory class: BOOT CORE SLB
+Addr:   20000000 
+Length: 0000C000 
+
+Processing Memory class: CODE
+Addr:   20040000 
+Length: 00653C70 
+

@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		883D28CF10A3638B000896FF /* NuFlsTools */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 883D28E410A363A5000896FF /* Build configuration list for PBXAggregateTarget "NuFlsTools" */;
+			buildPhases = (
+			);
+			dependencies = (
+				883D28D310A36391000896FF /* PBXTargetDependency */,
+				883D28D510A36391000896FF /* PBXTargetDependency */,
+			);
+			name = NuFlsTools;
+			productName = NuFlsTools;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		883D283110A35FD6000896FF /* sha256.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D27E610A35D12000896FF /* sha256.cpp */; };
+		883D283210A35FD7000896FF /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D27E410A35D12000896FF /* sha1.cpp */; };
+		883D283310A35FD8000896FF /* Sha_x.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D27E210A35D12000896FF /* Sha_x.cpp */; };
+		883D283510A35FDA000896FF /* PrgSequencer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D27DE10A35D12000896FF /* PrgSequencer.cpp */; };
+		883D283610A35FDB000896FF /* PrgHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D27DC10A35D12000896FF /* PrgHandler.cpp */; };
+		883D283810A35FDE000896FF /* mygetopt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D27D810A35D12000896FF /* mygetopt.cpp */; };
+		883D283910A35FDE000896FF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D27D710A35D12000896FF /* main.cpp */; };
+		883D283B10A35FE0000896FF /* IFWD_StringList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D27D210A35D12000896FF /* IFWD_StringList.cpp */; };
+		883D283C10A35FE1000896FF /* IFWD_MemoryStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D27CF10A35D12000896FF /* IFWD_MemoryStream.cpp */; };
+		883D283D10A35FE3000896FF /* Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D27CA10A35D12000896FF /* Control.cpp */; };
+		883D283E10A35FE3000896FF /* c_sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 883D27C810A35D12000896FF /* c_sha1.c */; };
+		883D283F10A35FE4000896FF /* utilfunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 883D281C10A35EA7000896FF /* utilfunctions.c */; };
+		883D285B10A36058000896FF /* c_sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 883D280010A35DC0000896FF /* c_sha1.c */; };
+		883D285C10A36059000896FF /* Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D280210A35DC0000896FF /* Control.cpp */; };
+		883D285D10A3605A000896FF /* IFWD_MemoryStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D280610A35DC0000896FF /* IFWD_MemoryStream.cpp */; };
+		883D285E10A3605B000896FF /* IFWD_StringList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D280910A35DC0000896FF /* IFWD_StringList.cpp */; };
+		883D285F10A3605C000896FF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D280B10A35DC0000896FF /* main.cpp */; };
+		883D286010A3605C000896FF /* mygetopt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D280C10A35DC0000896FF /* mygetopt.cpp */; };
+		883D286110A3605D000896FF /* PrgHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D280E10A35DC0000896FF /* PrgHandler.cpp */; };
+		883D286210A3605E000896FF /* PrgSequencer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 883D281010A35DC0000896FF /* PrgSequencer.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		883D28D210A36391000896FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 883D282510A35F23000896FF;
+			remoteInfo = NuFlsPack;
+		};
+		883D28D410A36391000896FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 883D284710A3601B000896FF;
+			remoteInfo = NuStripFls;
+		};
+		883D28D610A3639D000896FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 883D284710A3601B000896FF;
+			remoteInfo = NuStripFls;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		883D27C710A35D12000896FF /* as_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = as_defs.h; path = src/NuFlsPack/as_defs.h; sourceTree = SOURCE_ROOT; };
+		883D27C810A35D12000896FF /* c_sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = c_sha1.c; path = src/NuFlsPack/c_sha1.c; sourceTree = SOURCE_ROOT; };
+		883D27C910A35D12000896FF /* c_sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_sha1.h; path = src/NuFlsPack/c_sha1.h; sourceTree = SOURCE_ROOT; };
+		883D27CA10A35D12000896FF /* Control.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Control.cpp; path = src/NuFlsPack/Control.cpp; sourceTree = SOURCE_ROOT; };
+		883D27CB10A35D12000896FF /* Control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Control.h; path = src/NuFlsPack/Control.h; sourceTree = SOURCE_ROOT; };
+		883D27CC10A35D12000896FF /* coverage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coverage.h; path = src/NuFlsPack/coverage.h; sourceTree = SOURCE_ROOT; };
+		883D27CD10A35D12000896FF /* errorcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = errorcodes.h; path = src/NuFlsPack/errorcodes.h; sourceTree = SOURCE_ROOT; };
+		883D27CE10A35D12000896FF /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = src/NuFlsPack/Header.h; sourceTree = SOURCE_ROOT; };
+		883D27CF10A35D12000896FF /* IFWD_MemoryStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IFWD_MemoryStream.cpp; path = src/NuFlsPack/IFWD_MemoryStream.cpp; sourceTree = SOURCE_ROOT; };
+		883D27D010A35D12000896FF /* IFWD_MemoryStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFWD_MemoryStream.h; path = src/NuFlsPack/IFWD_MemoryStream.h; sourceTree = SOURCE_ROOT; };
+		883D27D110A35D12000896FF /* IFWD_std_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFWD_std_types.h; path = src/NuFlsPack/IFWD_std_types.h; sourceTree = SOURCE_ROOT; };
+		883D27D210A35D12000896FF /* IFWD_StringList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IFWD_StringList.cpp; path = src/NuFlsPack/IFWD_StringList.cpp; sourceTree = SOURCE_ROOT; };
+		883D27D310A35D12000896FF /* IFWD_StringList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFWD_StringList.h; path = src/NuFlsPack/IFWD_StringList.h; sourceTree = SOURCE_ROOT; };
+		883D27D610A35D12000896FF /* KeyFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyFormat.h; path = src/NuFlsPack/KeyFormat.h; sourceTree = SOURCE_ROOT; };
+		883D27D710A35D12000896FF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/NuFlsPack/main.cpp; sourceTree = SOURCE_ROOT; };
+		883D27D810A35D12000896FF /* mygetopt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mygetopt.cpp; path = src/NuFlsPack/mygetopt.cpp; sourceTree = SOURCE_ROOT; };
+		883D27D910A35D12000896FF /* mygetopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mygetopt.h; path = src/NuFlsPack/mygetopt.h; sourceTree = SOURCE_ROOT; };
+		883D27DC10A35D12000896FF /* PrgHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PrgHandler.cpp; path = src/NuFlsPack/PrgHandler.cpp; sourceTree = SOURCE_ROOT; };
+		883D27DD10A35D12000896FF /* PrgHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrgHandler.h; path = src/NuFlsPack/PrgHandler.h; sourceTree = SOURCE_ROOT; };
+		883D27DE10A35D12000896FF /* PrgSequencer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PrgSequencer.cpp; path = src/NuFlsPack/PrgSequencer.cpp; sourceTree = SOURCE_ROOT; };
+		883D27DF10A35D12000896FF /* PrgSequencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrgSequencer.h; path = src/NuFlsPack/PrgSequencer.h; sourceTree = SOURCE_ROOT; };
+		883D27E210A35D12000896FF /* Sha_x.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sha_x.cpp; path = src/NuFlsPack/Sha_x.cpp; sourceTree = SOURCE_ROOT; };
+		883D27E310A35D12000896FF /* Sha_x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sha_x.h; path = src/NuFlsPack/Sha_x.h; sourceTree = SOURCE_ROOT; };
+		883D27E410A35D12000896FF /* sha1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sha1.cpp; path = src/NuFlsPack/sha1.cpp; sourceTree = SOURCE_ROOT; };
+		883D27E510A35D12000896FF /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = src/NuFlsPack/sha1.h; sourceTree = SOURCE_ROOT; };
+		883D27E610A35D12000896FF /* sha256.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sha256.cpp; path = src/NuFlsPack/sha256.cpp; sourceTree = SOURCE_ROOT; };
+		883D27E710A35D12000896FF /* sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha256.h; path = src/NuFlsPack/sha256.h; sourceTree = SOURCE_ROOT; };
+		883D280010A35DC0000896FF /* c_sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = c_sha1.c; path = src/NuStripFls/c_sha1.c; sourceTree = SOURCE_ROOT; };
+		883D280110A35DC0000896FF /* c_sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_sha1.h; path = src/NuStripFls/c_sha1.h; sourceTree = SOURCE_ROOT; };
+		883D280210A35DC0000896FF /* Control.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Control.cpp; path = src/NuStripFls/Control.cpp; sourceTree = SOURCE_ROOT; };
+		883D280310A35DC0000896FF /* Control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Control.h; path = src/NuStripFls/Control.h; sourceTree = SOURCE_ROOT; };
+		883D280410A35DC0000896FF /* coverage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coverage.h; path = src/NuStripFls/coverage.h; sourceTree = SOURCE_ROOT; };
+		883D280510A35DC0000896FF /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = src/NuStripFls/Header.h; sourceTree = SOURCE_ROOT; };
+		883D280610A35DC0000896FF /* IFWD_MemoryStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IFWD_MemoryStream.cpp; path = src/NuStripFls/IFWD_MemoryStream.cpp; sourceTree = SOURCE_ROOT; };
+		883D280710A35DC0000896FF /* IFWD_MemoryStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFWD_MemoryStream.h; path = src/NuStripFls/IFWD_MemoryStream.h; sourceTree = SOURCE_ROOT; };
+		883D280810A35DC0000896FF /* IFWD_std_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFWD_std_types.h; path = src/NuStripFls/IFWD_std_types.h; sourceTree = SOURCE_ROOT; };
+		883D280910A35DC0000896FF /* IFWD_StringList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IFWD_StringList.cpp; path = src/NuStripFls/IFWD_StringList.cpp; sourceTree = SOURCE_ROOT; };
+		883D280A10A35DC0000896FF /* IFWD_StringList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFWD_StringList.h; path = src/NuStripFls/IFWD_StringList.h; sourceTree = SOURCE_ROOT; };
+		883D280B10A35DC0000896FF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/NuStripFls/main.cpp; sourceTree = SOURCE_ROOT; };
+		883D280C10A35DC0000896FF /* mygetopt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mygetopt.cpp; path = src/NuStripFls/mygetopt.cpp; sourceTree = SOURCE_ROOT; };
+		883D280D10A35DC0000896FF /* mygetopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mygetopt.h; path = src/NuStripFls/mygetopt.h; sourceTree = SOURCE_ROOT; };
+		883D280E10A35DC0000896FF /* PrgHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PrgHandler.cpp; path = src/NuStripFls/PrgHandler.cpp; sourceTree = SOURCE_ROOT; };
+		883D280F10A35DC0000896FF /* PrgHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrgHandler.h; path = src/NuStripFls/PrgHandler.h; sourceTree = SOURCE_ROOT; };
+		883D281010A35DC0000896FF /* PrgSequencer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PrgSequencer.cpp; path = src/NuStripFls/PrgSequencer.cpp; sourceTree = SOURCE_ROOT; };
+		883D281110A35DC0000896FF /* PrgSequencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrgSequencer.h; path = src/NuStripFls/PrgSequencer.h; sourceTree = SOURCE_ROOT; };
+		883D281210A35DC0000896FF /* ToolVersions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToolVersions.h; path = src/NuStripFls/ToolVersions.h; sourceTree = SOURCE_ROOT; };
+		883D281B10A35EA7000896FF /* ToolVersions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToolVersions.h; path = src/NuFlsPack/ToolVersions.h; sourceTree = SOURCE_ROOT; };
+		883D281C10A35EA7000896FF /* utilfunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utilfunctions.c; path = src/NuFlsPack/utilfunctions.c; sourceTree = SOURCE_ROOT; };
+		883D281D10A35EA7000896FF /* utilfunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utilfunctions.h; path = src/NuFlsPack/utilfunctions.h; sourceTree = SOURCE_ROOT; };
+		883D282610A35F23000896FF /* NuFlsPack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NuFlsPack; sourceTree = BUILT_PRODUCTS_DIR; };
+		883D284810A3601B000896FF /* NuStripFls */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NuStripFls; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		883D282410A35F23000896FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		883D284610A3601B000896FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* NuFlsTools */ = {
+			isa = PBXGroup;
+			children = (
+				883D27A710A35C0A000896FF /* NuFlsStrip */,
+				883D27A610A35BAB000896FF /* NuFlsPack */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = NuFlsTools;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				883D282610A35F23000896FF /* NuFlsPack */,
+				883D284810A3601B000896FF /* NuStripFls */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		883D27A610A35BAB000896FF /* NuFlsPack */ = {
+			isa = PBXGroup;
+			children = (
+				883D281B10A35EA7000896FF /* ToolVersions.h */,
+				883D281C10A35EA7000896FF /* utilfunctions.c */,
+				883D281D10A35EA7000896FF /* utilfunctions.h */,
+				883D27C710A35D12000896FF /* as_defs.h */,
+				883D27C810A35D12000896FF /* c_sha1.c */,
+				883D27C910A35D12000896FF /* c_sha1.h */,
+				883D27CA10A35D12000896FF /* Control.cpp */,
+				883D27CB10A35D12000896FF /* Control.h */,
+				883D27CC10A35D12000896FF /* coverage.h */,
+				883D27CD10A35D12000896FF /* errorcodes.h */,
+				883D27CE10A35D12000896FF /* Header.h */,
+				883D27CF10A35D12000896FF /* IFWD_MemoryStream.cpp */,
+				883D27D010A35D12000896FF /* IFWD_MemoryStream.h */,
+				883D27D110A35D12000896FF /* IFWD_std_types.h */,
+				883D27D210A35D12000896FF /* IFWD_StringList.cpp */,
+				883D27D310A35D12000896FF /* IFWD_StringList.h */,
+				883D27D610A35D12000896FF /* KeyFormat.h */,
+				883D27D710A35D12000896FF /* main.cpp */,
+				883D27D810A35D12000896FF /* mygetopt.cpp */,
+				883D27D910A35D12000896FF /* mygetopt.h */,
+				883D27DC10A35D12000896FF /* PrgHandler.cpp */,
+				883D27DD10A35D12000896FF /* PrgHandler.h */,
+				883D27DE10A35D12000896FF /* PrgSequencer.cpp */,
+				883D27DF10A35D12000896FF /* PrgSequencer.h */,
+				883D27E210A35D12000896FF /* Sha_x.cpp */,
+				883D27E310A35D12000896FF /* Sha_x.h */,
+				883D27E410A35D12000896FF /* sha1.cpp */,
+				883D27E510A35D12000896FF /* sha1.h */,
+				883D27E610A35D12000896FF /* sha256.cpp */,
+				883D27E710A35D12000896FF /* sha256.h */,
+			);
+			name = NuFlsPack;
+			sourceTree = "<group>";
+		};
+		883D27A710A35C0A000896FF /* NuFlsStrip */ = {
+			isa = PBXGroup;
+			children = (
+				883D280010A35DC0000896FF /* c_sha1.c */,
+				883D280110A35DC0000896FF /* c_sha1.h */,
+				883D280210A35DC0000896FF /* Control.cpp */,
+				883D280310A35DC0000896FF /* Control.h */,
+				883D280410A35DC0000896FF /* coverage.h */,
+				883D280510A35DC0000896FF /* Header.h */,
+				883D280610A35DC0000896FF /* IFWD_MemoryStream.cpp */,
+				883D280710A35DC0000896FF /* IFWD_MemoryStream.h */,
+				883D280810A35DC0000896FF /* IFWD_std_types.h */,
+				883D280910A35DC0000896FF /* IFWD_StringList.cpp */,
+				883D280A10A35DC0000896FF /* IFWD_StringList.h */,
+				883D280B10A35DC0000896FF /* main.cpp */,
+				883D280C10A35DC0000896FF /* mygetopt.cpp */,
+				883D280D10A35DC0000896FF /* mygetopt.h */,
+				883D280E10A35DC0000896FF /* PrgHandler.cpp */,
+				883D280F10A35DC0000896FF /* PrgHandler.h */,
+				883D281010A35DC0000896FF /* PrgSequencer.cpp */,
+				883D281110A35DC0000896FF /* PrgSequencer.h */,
+				883D281210A35DC0000896FF /* ToolVersions.h */,
+			);
+			name = NuFlsStrip;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		883D282510A35F23000896FF /* NuFlsPack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 883D282A10A35F44000896FF /* Build configuration list for PBXNativeTarget "NuFlsPack" */;
+			buildPhases = (
+				883D282310A35F23000896FF /* Sources */,
+				883D282410A35F23000896FF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				883D28D710A3639D000896FF /* PBXTargetDependency */,
+			);
+			name = NuFlsPack;
+			productName = NuFlsPack;
+			productReference = 883D282610A35F23000896FF /* NuFlsPack */;
+			productType = "com.apple.product-type.tool";
+		};
+		883D284710A3601B000896FF /* NuStripFls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 883D287010A3607C000896FF /* Build configuration list for PBXNativeTarget "NuStripFls" */;
+			buildPhases = (
+				883D284510A3601B000896FF /* Sources */,
+				883D284610A3601B000896FF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NuStripFls;
+			productName = NuStripFls;
+			productReference = 883D284810A3601B000896FF /* NuStripFls */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "NuFlsTools" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* NuFlsTools */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				883D282510A35F23000896FF /* NuFlsPack */,
+				883D284710A3601B000896FF /* NuStripFls */,
+				883D28CF10A3638B000896FF /* NuFlsTools */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		883D282310A35F23000896FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883D283110A35FD6000896FF /* sha256.cpp in Sources */,
+				883D283210A35FD7000896FF /* sha1.cpp in Sources */,
+				883D283310A35FD8000896FF /* Sha_x.cpp in Sources */,
+				883D283510A35FDA000896FF /* PrgSequencer.cpp in Sources */,
+				883D283610A35FDB000896FF /* PrgHandler.cpp in Sources */,
+				883D283810A35FDE000896FF /* mygetopt.cpp in Sources */,
+				883D283910A35FDE000896FF /* main.cpp in Sources */,
+				883D283B10A35FE0000896FF /* IFWD_StringList.cpp in Sources */,
+				883D283C10A35FE1000896FF /* IFWD_MemoryStream.cpp in Sources */,
+				883D283D10A35FE3000896FF /* Control.cpp in Sources */,
+				883D283E10A35FE3000896FF /* c_sha1.c in Sources */,
+				883D283F10A35FE4000896FF /* utilfunctions.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		883D284510A3601B000896FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883D285B10A36058000896FF /* c_sha1.c in Sources */,
+				883D285C10A36059000896FF /* Control.cpp in Sources */,
+				883D285D10A3605A000896FF /* IFWD_MemoryStream.cpp in Sources */,
+				883D285E10A3605B000896FF /* IFWD_StringList.cpp in Sources */,
+				883D285F10A3605C000896FF /* main.cpp in Sources */,
+				883D286010A3605C000896FF /* mygetopt.cpp in Sources */,
+				883D286110A3605D000896FF /* PrgHandler.cpp in Sources */,
+				883D286210A3605E000896FF /* PrgSequencer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		883D28D310A36391000896FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 883D282510A35F23000896FF /* NuFlsPack */;
+			targetProxy = 883D28D210A36391000896FF /* PBXContainerItemProxy */;
+		};
+		883D28D510A36391000896FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 883D284710A3601B000896FF /* NuStripFls */;
+			targetProxy = 883D28D410A36391000896FF /* PBXContainerItemProxy */;
+		};
+		883D28D710A3639D000896FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 883D284710A3601B000896FF /* NuStripFls */;
+			targetProxy = 883D28D610A3639D000896FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx.internal;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx.internal;
+			};
+			name = Release;
+		};
+		883D282810A35F23000896FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "UNIX_BUILD=1";
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PREBINDING = NO;
+				PRODUCT_NAME = NuFlsPack;
+			};
+			name = Debug;
+		};
+		883D282910A35F23000896FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS = "UNIX_BUILD=1";
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PREBINDING = NO;
+				PRODUCT_NAME = NuFlsPack;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		883D284A10A3601B000896FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = NuStripFls;
+			};
+			name = Debug;
+		};
+		883D284B10A3601B000896FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = NuStripFls;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		883D28D010A3638B000896FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = NuFlsTools;
+			};
+			name = Debug;
+		};
+		883D28D110A3638B000896FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = NuFlsTools;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "NuFlsTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		883D282A10A35F44000896FF /* Build configuration list for PBXNativeTarget "NuFlsPack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				883D282810A35F23000896FF /* Debug */,
+				883D282910A35F23000896FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		883D287010A3607C000896FF /* Build configuration list for PBXNativeTarget "NuStripFls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				883D284A10A3601B000896FF /* Debug */,
+				883D284B10A3601B000896FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		883D28E410A363A5000896FF /* Build configuration list for PBXAggregateTarget "NuFlsTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				883D28D010A3638B000896FF /* Debug */,
+				883D28D110A3638B000896FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
